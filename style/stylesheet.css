@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu";
+    font-size: 14px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header{
+    background: #313C4E;
+    display: flex;
+}
+
+.container .header .header-info{
+    padding: 30px 50px;
+    color: #FFF !important;
+}
+
+.container .header .img-holder{
+    padding: 30px 50px 30px 10px;
+}
+
+.container .header h2{
+    font-size: 35px;
+    font-weight: normal;
+}
+.container .header h4{
+    font-size: 20px;
+    font-weight: normal;
+    color: #409399 !important;
+}
+.container .header p{
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+.container .header img{
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    border: #409399 5px solid;
+}
+
+.container .details{
+    background: #222A33;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px 50px;
+    font-size: 14px;
+    color: #FFF;
+}
+.container .details a{
+    text-decoration: none;
+    color: #FFF;
+}
+.container .details a:hover{
+    text-decoration: underline;
+}
+.container .details .info{
+    width: 100%;
+    padding: 5px;
+}
+.container .details > div{
+    flex: 0 50%;
+    box-sizing: border-box;
+}
+.container .details .info i{
+    width: 16px;
+    height: 16px;
+    padding-right: 10px;
+    font-size: 16px;
+}
+
+.container .content{
+    color: #000;
+    display: flex;
+    padding: 30px 50px;
+}
+.container .content .experience{
+    flex-grow: 6;
+    padding-right: 25px;
+}
+.container .content .skills{
+    flex-grow: 4;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    min-width: 30%;
+}
+.container .content .experience .work h3{
+    color: #449399;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight:900;
+    padding-bottom: 15px;
+}
+.container .content .experience .work .work-experience{
+    padding-bottom: 20px;
+}
+.container .content .experience .work .work-experience h2{
+    font-size: 20px;
+}
+.container .content .experience .work .work-experience h5{
+    font-size: 18px;
+}
+.container .content .experience .work .work-experience h4{
+    padding: 10px 0px;
+    color: #449399;
+}
+.container .content .experience .work .work-experience p{
+    color: #84807C;
+    font-style: italic;
+}
+.container .content .experience .work .work-experience .workingExperience{
+    display: flex;
+    justify-content: space-between;
+    color: #449399;
+    font-style: italic;
+    padding: 10px 0px;
+}
+.container .content .experience .work .work-experience ul{
+    list-style: none;
+}
+.container .content .experience .work .work-experience .bullets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container .content .experience .work .work-experience .bullets>li{
+    flex: 0 50%;
+    box-sizing: border-box;
+}
+.container .content .experience .work .work-experience ul li:before{
+    content: "\2022";
+    color: #449399;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.container .content .skills .skill{
+    padding-bottom: 30px;
+}
+.container .content .skills .skill h3{
+    color: #449399;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight:900;
+    padding-bottom: 15px;
+}
+.container .content .skills .skill .tabs{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .content .skills .skill .tabs .tab{
+    padding: 5px;
+    background: #313C4E;
+    color: #FFF;
+    border-radius: 5px;
+    margin: 5px;
+}
+.container .content .skills .skill .bullet{
+    padding-bottom: 15px;
+}
+.container .content .skills .skill .bullet:before{
+    content:"\2022";
+    color: #449399;
+    padding-right: 10px;
+    font-size: 20px;
+}
+.container .content .skills .skill .bullet p{
+    color: #84807C;
+    font-style: italic;
+    font-size: 12px;
+    padding-left: 15px;
+}
