@@ -13,12 +13,9 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            display: grid;
         }
-        .banner p{
-            color: #FFF;
-            position: fixed;
-            right: 25%;
-            bottom: 15%;
+        .numBlock{
             font-size: 100px;
         }
     </style>
@@ -26,7 +23,10 @@
 <body>
 <div class="banner">
 <!--    <img src="./images/countdown/countdownBanner.png">-->
-    <p id="demo">Stream Starts soon</p>
+    <p id="hours" class="numBlock">59</p>
+    <p id="mins" class="numBlock">59</p>
+    <p id="secs" class="numBlock">59</p>
+<!--    <p id="demo">Stream Starts soon</p>-->
 </div>
 <script>
 // Set the date we're counting down to
