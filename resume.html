@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./style/stylesheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="icon" href="./images/logo.png">
 </head>
 <body>
@@ -35,7 +36,7 @@
                 <div class="work">
                     <h3>Work Experience</h3>
                     <div id="work_experience">
-                        
+                        <div class="text-center"><span class="spinner-border"></span></div>
                     </div>
                 </div>
                 <div class="work">
@@ -157,31 +158,32 @@
             data.experiences.forEach(experience => {
                 var key_points = ``;
                 for (var i = 0; i < experience.key_points.length; i++) {
-                    if (experience.key_points[i].heading != null) {
-                        key_points += `<li class="list-group-item">
-                            <p><b>${experience.key_points[i].heading}: </b>${experience.key_points[i].description}</p>
+                    if (experience.key_points[i].heading != null || experience.key_points[i].heading != "") {
+                        key_points += `<li>
+                            <b>${experience.key_points[i].heading}: </b>${experience.key_points[i].description}
                         </li>`;
                     }
                     else {
-                        key_points += `<li class="list-group-item">
-                            <p>${experience.key_points[i].description}</p>
+                        key_points += `<li>
+                            ${experience.key_points[i].description}
                         </li>`;
                     }
                 }
-                experience_list.innerHTML += `
+                if (key_points != ``)
+                    key_points = `<h4>Achievements/Tasks</h4>` + key_points;
+                var company_desc = ``;
+                if (experience.company.description != null)
+                    company_desc = experience.company.description;
+                work_experience.innerHTML += `
                 <div class="work-experience">
-                    <h2>Pipeline Developer</h2>
-                    <h5>Hogarth Worldwide</h5>
+                    <h2>${experience.position}</h2>
+                    <h5>${experience.company.company_name}</h5>
                     <div class="workingExperience">
-                        <div class="dateExperience">02/2024 - Present</div>
-                        <div class="workPlace">Chennai, India</div>
+                        <div class="dateExperience">${experience.start_date} - ${experience.end_date}</div>
+                        <div class="workPlace">${experience.company.place}</div>
                     </div>
-                    <p>Hogarth is a marketing implementation agency. It produce advertising and other marketing communications for it's clients across all media and all languages.</p>
-                    <h4>Achievements/Tasks</h4>
-                    <ul>
-                        <li>Working as a pipeline developer</li>
-                        <li>Working on Research and Development of pipeline department</li>
-                    </ul>
+                    <p>${company_desc}</p>
+                    ${key_points}
                 </div>
                 `;
             });
