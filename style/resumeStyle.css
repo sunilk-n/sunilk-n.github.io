@@ -1,0 +1,22 @@
+*{
+    font-family:"Ubuntu";
+    font-size: 15px;
+}
+.header {
+    background: #313C4E;
+}
+.header .img-holder img{
+    max-width: 150px;
+}
+.teal-text{
+    color: #409399;
+}
+.header .header-info h4{
+    font-size: 18px;
+}
+.details{
+    background: #222A33;
+}
+.teal-bg-dark{
+    background: #222A33;
+}
